@@ -131,8 +131,7 @@ def main():
 		walls.append((int(line1[0]),int(line1[1])))
 	for i in range(rows):
 		for j in range(cols):
-			if util[i][j] and util[i][j] != board[i][j] :
-				board[i][j] = 0
+			board[i][j] -= util[i][j]
 	
 	line1 = raw_input().split(' ')
 	start = (int(line1[0]),int(line1[1]))
